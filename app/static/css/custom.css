@@ -4,6 +4,33 @@
     box-sizing: border-box;
 }
 
+nav {
+    position: fixed !important;
+    width: 100%;
+    margin-bottom: 200px;
+    background: #F8F9FA !important;
+}
+
+.navbar-brand {
+    margin-right: 5rem;
+    font-size: 2.2rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    font-weight: 400;
+}
+
+.nav-link {
+    display: block;
+    padding: 1rem 3rem;
+    color: #000;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
 
 /* INDEX STYLING  */
 
@@ -15,10 +42,6 @@
     cursor: pointer;
     width: 100%;
     height: 400px;
-}
-
-.disp_img img:hover {
-    opacity: .8;
 }
 
 .disp_info {
