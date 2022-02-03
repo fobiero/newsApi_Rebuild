@@ -1,23 +1,14 @@
+from app.request import get_news
 from flask import render_template
 from app import app
 
 # Views
 @app.route('/')
 def index():
+    # Getting technology news on pageLoad
 
-    '''
-    View root page function that returns the index page and its data
-    '''
-
-    title = 'Pata News'
-    return render_template('index.html',title = title)
-
-
-@app.route('/news/<int:news_id>')
-def news(news_id):
-
-    '''
-    View movie page function that returns the movie details page and its data
-    '''
-    return render_template('news.html',id = news_id)
+    news_results = get_news('popular')
+    print(news_results)
+    title = 'Pata News ya Usasa'
+    return render_template('index.html', title = title, popular = news_results)
 
