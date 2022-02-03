@@ -30,10 +30,10 @@ In your terminal:
 To run the application, in your terminal:
  * $ #!/usr/bin/env python3.6.8
  * $ chmod +x run.py
- * $ ./run.py
+ * $ ./start.sh
 
 ### Technologies Used
-* Python3 ( Flask )
+* Python3.8 ( Flask )
 
 #### License
 This software is approved,verified, licensed and monitored by the MIT.Thus changes and new releases of this software, webApp and designes shall be of the same source. Rights, terms and all conditions apply. Check out he full license release on [MIT](LICENCE).
