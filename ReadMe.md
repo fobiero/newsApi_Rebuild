@@ -23,9 +23,9 @@ A user :
 ### Cloning from github
 In your terminal:
 
- * $ git clone https://github.com/fobiero/python_NewsAPI_C02
- * $ cd 
- * Project live link : https://python-newsapp.herokuapp.com/
+ * $ git clone https://github.com/fobiero/newsApi_Rebuild
+ * $ cd newsApi_Rebuild
+
 ### Running the Application
 To run the application, in your terminal:
  * $ #!/usr/bin/env python3.6.8
