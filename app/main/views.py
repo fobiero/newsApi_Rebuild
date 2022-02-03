@@ -1,3 +1,4 @@
+# from urllib.request import _UrlopenRet
 from ..request import get_articles, get_sources
 from flask import render_template
 from . import main
@@ -5,15 +6,8 @@ from . import main
 @main.route('/')
 def index():
     general_sources = get_sources('general')
-    # business_news = get_sources('business')
-    # technology_sources = get_sources('technology')
-    # entertainment_sources = get_sources('entertainment')
-    # science_sources = get_sources('science')
-    # health_sources = get_sources('health')
-    # sports_sources = get_sources('sports')
-    
     title = 'Pata News'
-    # return render_template('index.html', title = title,general = general_sources,business=business_news,technology =technology_sources,enternainment= entertainment_sources,sports =sports_sources,science = science_sources,health= health_sources)
+
     return render_template('index.html', title = title,general = general_sources)
 
 @main.route('/source/<source_id>')
@@ -33,8 +27,10 @@ def source(id):
     '''
     source = get_sources(id)
     title = f'{source.title}'
-
-    return render_template('news.html',title = title,source= source)    
+    urlToImage = source.urlToImage
+    url = source.url
+    
+    return render_template('news.html',title = title,source= source, urlToImage = urlToImage, url = url)    
 
 
 @main.route('/articles/<id>')
@@ -46,4 +42,5 @@ def article(id):
     article = get_articles(id)
     title = f'{id}'
 
-    return render_template('news.html',title = title,article= article)        
+    return render_template('news.html',title = title,article= article)
+    
