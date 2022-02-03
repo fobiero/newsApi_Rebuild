@@ -4,7 +4,62 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-md-4" width="100%">
+        <div class="col-md-9">
+            <div class="disp_cont">
+                <div class="disp_img"><img src="{{url_for('static', filename='images/banner.jpeg')}}" alt="economy" /></div>
+                <div class="disp_info container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="random-img">
+                                <img src="{{url_for('static', filename='images/img-1.jpg')}}" alt="economy" />
+                                <p>Lorem ipsum dolor este en sit.
+                                    <a href="#">more..</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="random-img">
+                                <img src="{{url_for('static', filename='images/img-2.jpg')}}" alt="economy" />
+                                <p>Lorem ipsum dolor tomen sit.
+                                    <a href="#">more..</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="random-img">
+                                <img src="{{url_for('static', filename='images/img-3.jpeg')}}" alt="economy" />
+                                <p>Lorem ipsum dolor sitipsum dolor s.
+                                    <a href="#">more..</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="random-img">
+                                <img src="{{url_for('static', filename='images/img-4.jpeg')}}" alt="economy" />
+                                <p>Lorem ipsum dolor dos sit.
+                                    <a href="#">more..</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <h2>Economy status</h2>
+                    <p class="h3_desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, esse.</p> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="splash_news">
+                <div class="card">
+                    <div class="card-item">
+                        <p>Trending</p>
+                    </div>
+                    <div class="card-info">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-md-4" width="100%">
             <h3 class="text-primary">Health News</h3>
             <img src="{{url_for('static', filename='images/health.jpg')}}" alt="business parters" width="100%" />
             <div style="width: 100%">{{macro.displaySourceList(health)}}</div>
@@ -18,7 +73,7 @@
             <h3 class="text-primary">Entertainment</h3>
             <img src="{{url_for('static', filename='images/entertainment.jpeg')}}" alt="business parters" width="100%" />
             <div class="">{{macro.displaySourceList(entertainment)}}</div>
-        </div>
+        </div> -->
     </div>
 </div>
 </div>
