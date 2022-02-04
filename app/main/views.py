@@ -11,6 +11,7 @@ def index():
 
     return render_template('index.html', title = title,general = general_sources)
 
+
 @main.route('/source/<source_id>')
 def artcicles(source_id):
 
@@ -42,8 +43,9 @@ def sports():
     '''
 
     sport_news = get_sources('sports')
-    title = 'Sports News'
 
+    title = 'Sports'
+    
     return render_template('sports.html', title = title,sports=sport_news)
 
 @main.route('/business')
@@ -51,6 +53,7 @@ def business():
     '''
     Business News
     '''
+
     business_news = get_sources('business')
     title = 'Business News'
 
