@@ -1,19 +1,16 @@
 {% extends 'default.html'%} {% import 'macros.html' as macro%}
 <!-- styles -->
-<!-- body -->
-<div class="body">
-    {% block content %}
-    <div class="sp_news">
-        <div class="sp_news_tr">
-            <h3> Sports News </h3>
-            <ul>
-                {{ macro.displaySourceList(sports)}}
-            </ul>
-        </div>
-        <div class="rec">
-            <h3> Entertainment</h3>
-            {{macro.displaySourceList(entertainment)}}
-        </div>
+{% block content %}
+<div class="sp_news container">
+    <div class="sp_news_tr">
+        <h3 style="text-align: center; padding: 2rem 0; font-size: 2.5rem;"> Sports News </h3>
+        <ul>
+            {{ macro.displaySourceList(sports)}}
+        </ul>
     </div>
-    {% endblock%}
+    <div class="rec">
+        <h3> Entertainment</h3>
+        {{macro.displaySourceList(entertainment)}}
+    </div>
 </div>
+{% endblock%}
