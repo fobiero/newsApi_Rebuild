@@ -1,6 +1,5 @@
 import urllib.request,json
 from .models import Sources, Articles
-from requests.auth import HTTPBasicAuth
 
 Sources = Sources
 Article = Articles
@@ -34,7 +33,6 @@ def get_sources(category):
 
 
 def process_source_results(source_list):
-
     source_results = []
     for source_item in source_list:
 
