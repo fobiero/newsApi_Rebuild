@@ -1,5 +1,6 @@
 import urllib.request,json
 from .models import Sources, Articles
+from requests.auth import HTTPBasicAuth
 
 Sources = Sources
 Article = Articles
