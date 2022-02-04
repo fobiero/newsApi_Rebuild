@@ -1,10 +1,6 @@
 import os
 
 class Config:
-    """
-    General configaration parent class
-    
-    """
     
     NEWS_SOURCES_API_BASE_URL = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
     

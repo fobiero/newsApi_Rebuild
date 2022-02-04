@@ -1,0 +1,15 @@
+{% extends 'default.html'%} {% import 'macros.html' as macro%}
+<!-- styles -->
+<!-- body -->
+<div class="body">
+    {% block content %}
+    <div class="bs_news">
+        <div class="al_bs_news">
+            <h3> Business News </h3>
+            <ul>
+                {{ macro.displaySourceList(business)}}
+            </ul>
+        </div>
+    </div>
+    {% endblock%}
+</div>

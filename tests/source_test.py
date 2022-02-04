@@ -1,5 +1,5 @@
 import unittest
-from app.models import Sources
+from app.model import Sources
 
 class SourceTest(unittest.TestCase):
     """
@@ -9,7 +9,7 @@ class SourceTest(unittest.TestCase):
     def setUp(self):
         """
         """
-        self.new_source = Sources('Test id','Test name','Test description','Test author', 'Test publishedAt', 'Test title')
+        self.new_source = Sources('Test id','Test name','Test description','Test author', 'Test publishedAt', 'Test title', 'Test urlToImage')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_source,Sources)) 

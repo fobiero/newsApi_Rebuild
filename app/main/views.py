@@ -10,37 +10,62 @@ def index():
 
     return render_template('index.html', title = title,general = general_sources)
 
+
 @main.route('/source/<source_id>')
 def artcicles(source_id):
 
-    '''
-    View news page function that returns the news details page and its data
-    '''
-    
     return render_template('index.html',id = source_id)
 
 @main.route('/source/<int:id>')
 def source(id):
 
-    '''
-    View source page function that returns the movie details page and its data
-    '''
     source = get_sources(id)
     title = f'{source.title}'
-    urlToImage = source.urlToImage
-    url = source.url
+    # urlToImage = source.urlToImage
+    # url = source.url
     
-    return render_template('news.html',title = title,source= source, urlToImage = urlToImage, url = url)    
+    return render_template('news.html',title = title,source= source)    
 
 
 @main.route('/articles/<id>')
 def article(id):
 
     '''
-    View news page function that returns the news details page and its data
+   returns article ID
     '''
     article = get_articles(id)
     title = f'{id}'
 
     return render_template('news.html',title = title,article= article)
     
+@main.route('/sports')
+def sports():
+    '''
+    Sports news
+    '''
+
+    sport_news = get_sources('sports')
+
+    title = 'Welcome to Home of champions'
+    return render_template('sports.html', title = title,sports=sport_news)
+
+@main.route('/business')
+def business():
+    '''
+    Business News
+    '''
+
+    business_news = get_sources('business')
+    title = 'Business News'
+    return render_template('business.html', title = title, business = business_news)
+
+
+@main.route('/technology')
+def technology():
+    '''
+    technology News
+    '''
+
+    technology_news = get_sources('technology')
+    title = 'Technology News'
+    return render_template('business.html', title = title, technology = technology_news)
