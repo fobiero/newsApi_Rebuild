@@ -2,23 +2,8 @@
 <!-- source list /  -->
 {%for source in source_list%}
 <div class="source-card">
-    <!-- <img src="{{source.urlToImage}}" alt="" width="200px" height="200px"> -->
     <h3>{{source.name}}</h3>
     <p>{{source.description}}</p>
     <a href="/articles/{{source.id}}">Sources from {{source.id}}</a>
 </div>
 {% endfor %} {% endmacro %}
-
-
-
-
-
-
-<!-- {%macro displaySourceList(source_list)%} {%for source in source_list%}
-<div class="source-card">
-    <h3>{{source.name}}</h3>
-    <p>{{source.description}}</p>
-    <a href="/articles/{{source.id}}" class="btn btn-success">
-    Sources from {{source.id}}</a>
-</div>
-{% endfor %} {% endmacro %} -->

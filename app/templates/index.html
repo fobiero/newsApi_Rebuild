@@ -61,8 +61,20 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class=" rnd-dt container">
     <h1 style="text-align: center; padding: 2rem 0; font-size: 2.5rem;">Popular News</h1>
-    <div class="">{{macro.displaySourceList(general)}}</div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="rnd-news">
+                <div class="">{{macro.displaySourceList(general)}}</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="det">
+                <h2>Side lines</h2>
+                <img src="{{url_for('static', filename='images/global.jpg')}}" alt="">
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
